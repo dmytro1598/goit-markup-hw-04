@@ -118,9 +118,10 @@ address {
 .link-header:focus {
   color: var(--accent-color);
 }
-.contacts-footer:hover,
-.contacts-footer:active {
-  color: var(--accent-color);
+
+.link-header:hover .icon-header,
+.link-header:focus .icon-header {
+  fill: var(--accent-color);
 }
 .main-nav {
   display: flex;
@@ -158,6 +159,17 @@ address {
   justify-content: center;
   background-color: var(--dark-bg-color);
   height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/people.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title-text {
@@ -179,7 +191,6 @@ address {
 .advantage-boxes:not(:first-child) {
   margin-left: 30px;
 }
-
 .title-advantage {
   display: flex;
   font-weight: bold;
@@ -194,6 +205,16 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+.icon-advantage {
+  display: block;
+  margin-bottom: 30px;
+  background-color: var(--second-bg-color);
+  height: 120px;
+  width: 270px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px 100px;
 }
 .engage-list {
   display: flex;
@@ -249,15 +270,60 @@ address {
 .name-title + .profession {
   margin-top: 10px;
 }
+.social-network {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+.icon-social-network-ellipse {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border: 2px solid;
+  border-radius: 50%;
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+.icon-social-network-ellipse:not(:first-child) {
+  margin-left: 10px;
+}
+.link-social-network {
+  display: flex;
+}
+.icon-social-network {
+  display: inline-flex;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .footer {
   background-color: var(--dark-bg-color);
 }
 .contacts-header {
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: #757575;
+}
+.contacts-header > .icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  fill: #757575;
+}
+.contacts-header > .icon-envelope {
+  width: 16px;
+  height: 10px;
+  margin-right: 10px;
+  background-size: contain;
+  fill: #757575;
 }
 .address {
   color: var(--dark-bg-text-color);
