@@ -1,5 +1,6 @@
 :root {
   --main-text-color: #212121;
+  --second-text-color: #757575;
   --dark-bg-text-color: #ffffff;
   --accent-color: #2196f3;
   --dark-bg-color: #2f303a;
@@ -204,7 +205,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-text-color);
 }
 .icon-advantage {
   display: block;
@@ -265,40 +266,63 @@ address {
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 30px;
+  color: var(--second-text-color);
 }
 .name-title + .profession {
   margin-top: 10px;
 }
+
 .social-network {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 30px;
-}
-.icon-social-network-ellipse {
   display: inline-flex;
-  align-items: center;
-  height: 44px;
-  width: 44px;
-  border: 2px solid;
-  border-radius: 50%;
-  flex-basis: calc((100% - 30px * 3) / 4);
-}
-.icon-social-network-ellipse:not(:first-child) {
-  margin-left: 10px;
+  margin: 16px 31.5px 30px 31.5px;
 }
 .link-social-network {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+.item-social-network + .item-social-network {
+  margin-left: 10px;
 }
 .icon-social-network {
-  display: inline-flex;
   height: 20px;
   width: 20px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  fill: #afb1b8;
 }
+.link-social-network:hover,
+.link-social-network:focus {
+  background-color: var(--accent-color);
+}
+.link-social-network:hover .icon-social-network,
+.link-social-network:focus .icon-social-network {
+  fill: #ffffff;
+}
+.list-clients {
+  display: inline-flex;
+  flex-basis: calc((100% - 30px * 5) / 6);
+}
+.list-clients:not(:first-child) {
+  margin-left: 30px;
+}
+.link-clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  color: #afb1b8;
+  border: 1px solid;
+  border-radius: 4px;
+}
+.link-clients + .link-clients {
+  margin-left: 30px;
+}
+.logo-client {
+  fill: #afb1b8;
+}
+
 .footer {
   background-color: var(--dark-bg-color);
 }
@@ -309,21 +333,21 @@ address {
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--second-text-color);
 }
 .contacts-header > .icon-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   background-size: contain;
-  fill: #757575;
+  fill: var(--second-text-color);
 }
 .contacts-header > .icon-envelope {
   width: 16px;
-  height: 10px;
+  height: 12px;
   margin-right: 10px;
   background-size: contain;
-  fill: #757575;
+  fill: var(--second-text-color);
 }
 .address {
   color: var(--dark-bg-text-color);
@@ -409,7 +433,7 @@ address {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-text-color);
 }
 .portfolio-card-title + .portfolio-card-description {
   margin-top: 4px;
